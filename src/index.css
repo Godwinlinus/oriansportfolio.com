@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#0a0a0a] text-gray-200 font-sans;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
