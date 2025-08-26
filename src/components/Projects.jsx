@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 export default function Projects() {
   const projects = [
     {
-      title: "Study Tracker",
-      desc: "A web app to track & manage study sessions.",
+      title: "Budget App",
+      desc: "A web app to track & manage income and expenditure.",
       tags: ["React", "Tailwind"],
       img: "/projects/study-tracker.png",
     },

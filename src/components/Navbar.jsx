@@ -16,7 +16,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo / Name */}
         <a href="#hero" className="text-xl font-bold text-blue-400">
-          Linus.dev
+          ORIAN
         </a>
 
         {/* Desktop Menu */}

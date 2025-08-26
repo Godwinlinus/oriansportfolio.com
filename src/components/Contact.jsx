@@ -13,7 +13,7 @@ export default function Contact() {
           <Mail />
         </a>
         <a
-          href="https://github.com/linusgodwin"
+          href="https://github.com/Godwinlinus?tab=overview&from=2025-07-01&to=2025-07-31"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-blue-400"
@@ -21,7 +21,7 @@ export default function Contact() {
           <Github />
         </a>
         <a
-          href="https://linkedin.com/in/linusgodwin"
+          href="https://linkedin.com/in/godwin-linus-md-4a5082196"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-blue-400"
