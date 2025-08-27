@@ -7,19 +7,19 @@ export default function Projects() {
       title: "Budget App",
       desc: "A web app to track & manage income and expenditure.",
       tags: ["React", "Tailwind"],
-      img: "/projects/study-tracker.png",
+      img: "/projects/budgetapp.jpg",
     },
     {
       title: "Symptom Diary",
       desc: "Track health symptoms with a clean UI.",
       tags: ["Next.js", "MongoDB"],
-      img: "/projects/symptom-diary.png",
+      img: "/projects/symptomdiary.jpg",
     },
     {
-      title: "Personal Portfolio",
-      desc: "My responsive portfolio built with React.",
+      title: "Online resturant",
+      desc: "A responsive online resturant for convinience shopping.",
       tags: ["React", "JavaScript", "CSS"],
-      img: "/projects/portfolio.png",
+      img: "/projects/resturant.ipg",
     },
   ];
 
