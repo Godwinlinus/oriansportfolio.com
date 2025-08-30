@@ -7,19 +7,19 @@ export default function Projects() {
       title: "Budget App",
       desc: "A web app to track & manage income and expenditure.",
       tags: ["React", "Tailwind"],
-      img: "/projects/budgetapp.jpg",
+      img: "/budgetapp.jpg",
     },
     {
       title: "Symptom Diary",
       desc: "Track health symptoms with a clean UI.",
       tags: ["Next.js", "MongoDB"],
-      img: "/projects/symptomdiary.jpg",
+      img: "/symptomdiary.jpg",
     },
     {
       title: "Online resturant",
       desc: "A responsive online resturant for convinience shopping.",
       tags: ["React", "JavaScript", "CSS"],
-      img: "/projects/resturant.ipg",
+      img: "/resturant.ipg",
     },
   ];
 
