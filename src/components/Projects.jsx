@@ -19,7 +19,7 @@ export default function Projects() {
       title: "Online resturant",
       desc: "A responsive online resturant for convinience shopping.",
       tags: ["React", "JavaScript", "CSS"],
-      img: "/resturant.ipg",
+      img: "/resturant.jpg",
     },
   ];
 
