@@ -32,7 +32,7 @@ export default function About() {
           scalable, and user-friendly web applications.
         </p>
         <div className="flex gap-3 flex-wrap">
-          {["Frontend", "React", "UI Design"].map((skill) => (
+          {["Frontend", "React", "Next", "UI Design"].map((skill) => (
             <span
               key={skill}
               className="px-4 py-2 bg-gray-800 rounded-full text-sm text-blue-300"
