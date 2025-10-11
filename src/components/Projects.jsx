@@ -1,8 +1,14 @@
- import React from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 export default function Projects() {
   const projects = [
+   {
+      title: "Streamr",
+      desc: "A Modern and responsive Movie disovery web app",
+      tags: ["React", "Tailwind", "Framer motion", "TMDB", "Appwrite"],
+      img: "/20251010_183143.jpg",
+    },
     {
       title: "Budget App",
       desc: "A web app to track & manage income and expenditure.",
