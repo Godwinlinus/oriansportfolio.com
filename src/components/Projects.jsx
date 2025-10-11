@@ -7,7 +7,7 @@ export default function Projects() {
       title: "Streamr",
       desc: "A Modern and responsive Movie disovery web app",
       tags: ["React", "Tailwind", "Framer motion", "TMDB", "Appwrite"],
-      img: "/20251010_183143.jpg",
+      img: "/streamr.jpg",
     },
     {
       title: "Budget App",
