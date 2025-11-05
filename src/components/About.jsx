@@ -152,11 +152,6 @@ export default function About() {
             </motion.details>
           ))}
         </div>
-
-        <p className="text-sm text-gray-400 mt-2">
-          Tip: expand any category to reveal more detail. Keep this component on
-          your CV site or convert sections to a PDF-friendly format for printing.
-        </p>
       </motion.div>
     </section>
   );
