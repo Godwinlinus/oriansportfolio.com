@@ -52,7 +52,6 @@ export default function TechnicalSkills() {
               <div className="flex justify-center mt-2 mb-2">
                 <div className="text-5xl">{skill.icon}</div>
               </div>  
-               
             </div>
           </motion.div>
         ))}
