@@ -63,15 +63,14 @@ export default function Contact() {
           </motion.a>
         ))}
       </div>
-
       <motion.a
-        href="+2349025372950" // this will open the phone dialer
+        href="tel:+2349025372950"
         whileHover={{ scale: 1.1 }}
         transition={{ type: "spring", stiffness: 250 }}
         className="mt-16 inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white font-semibold tracking-widest shadow-lg hover:from-fuchsia-500 hover:to-purple-500 transition-all"
       >
-        <Phone size={24} /> {/* phone icon */}
-        SAY HELLO
+         <Phone size={24} />
+           SAY HELLO
       </motion.a>
     </motion.section>
   );
