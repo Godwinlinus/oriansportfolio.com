@@ -71,11 +71,10 @@ export default function About() {
       >
         <h2 className="text-lg font-bold mb-4 tracking-widest text-fuchsia-400">ABOUT ME</h2>
         <p className="text-xl text-gray-300 mb-6 font-light leading-relaxed">
-          I’m Dr. Linus Godwin — a medical doctor who writes front-end code for
-          fun and impact. I turn complex ideas into smooth, interactive
-          experiences you can see, click, and love. Blending precision from
-          medicine with creativity in design, I build interfaces that feel
-          effortless and alive.
+          I’m Dr. Linus Mba, a front-end engineer and medical doctor driven 
+          by vision and precision. I craft digital experiences that merge design, 
+          logic, and emotion—turning abstract ideas into seamless, high-performing 
+          interfaces. Every project is a chance to build something that lasts, grows, and inspires.
         </p>
         <div className="flex gap-4 flex-wrap tracking-widest font-semibold">
           <a
