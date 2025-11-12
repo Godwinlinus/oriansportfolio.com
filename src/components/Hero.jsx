@@ -141,7 +141,7 @@ export default function Hero() {
               key={platform}
               href={url}
               target="_blank"
-              className="py-20 px-5 md:px-0 rotate-270 text-gray-300 hover:text-cyan-400 transition"
+              className="py-20 px-3 md:px-0 rotate-270 text-gray-300 hover:text-cyan-400 transition"
             >
               {platform}
             </a>
