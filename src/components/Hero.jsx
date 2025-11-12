@@ -45,10 +45,10 @@ export default function Hero() {
       ref={containerRef}
       onMouseMove={handlePointerMove}
       onMouseLeave={handlePointerLeave}
-      className="relative flex flex-col justify-center items-center min-h-screen px-6 md:px-20 pt-40 overflow-hidden"
+      className="relative flex flex-col justify-center items-center px-6 md:px-20 pt-40 overflow-hidden"
     >
       {/* BACKGROUND GRID (upper-right half) */}
-      <div className="pointer-events-none absolute  w-full h-full md:absolute top-0 right-0 md:w-1/2 md:h-1/2 -z-10 overflow-hidden">
+      <div className="pointer-events-none absolute w-full h-full md:absolute top-0 right-0 md:w-1/2 md:h-1/2 -z-10 overflow-hidden">
         <svg
           width="100%"
           height="100%"
@@ -134,14 +134,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-xs tracking-widest font-light md:flex flex-col items-center z-20"
+          className="text-xs tracking-widest font-light text-center md:flex flex-col items-center z-20"
         >
           {Object.entries(socials).map(([platform, url]) => (
             <a
               key={platform}
               href={url}
               target="_blank"
-              className="py-20 px-12 md:px-0 rotate-270 text-gray-300 hover:text-cyan-400 transition"
+              className="py-20 px-5 md:px-0 rotate-270 text-gray-300 hover:text-cyan-400 transition"
             >
               {platform}
             </a>
