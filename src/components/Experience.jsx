@@ -5,7 +5,7 @@ const educationData = [
   {
     company: "University of Jos, Nigeria",
     role: "Bachelor of Medicine, Bachelor of Surgery",
-    period: "2023",
+    period: "2025",
     description:
       "Clinical training and academic leadership. Coordinated projects, led student initiatives, and supported digital health interventions.",
   },
