@@ -76,13 +76,13 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="w-full flex justify-between items-center text-left z-10">
-        <div className="flex flex-col">
+      <div className="w-full md:flex flex-row justify-between items-center text-left z-10">
+        <div className="flex flex-col mb-20 md:mb-0">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-6xl lg:text-8xl font-bold leading-tight text-gray-100 mb-4"
+            className="text-6xl md:text-8xl lg:text-8xl font-bold leading-tight text-gray-100 mb-4"
           >
             <div className="flex gap-6 items-center font-light mb-6">
               <motion.div
@@ -134,19 +134,19 @@ export default function Hero() {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-xs tracking-widest font-light hidden md:flex flex-col items-center z-20"
+          className="text-xs tracking-widest font-light md:flex flex-col items-center z-20"
         >
           {Object.entries(socials).map(([platform, url]) => (
             <a
               key={platform}
               href={url}
               target="_blank"
-              className="py-12 rotate-270 text-gray-300 hover:text-cyan-400 transition"
+              className="py-20 px-12 md:px-0 rotate-270 text-gray-300 hover:text-cyan-400 transition"
             >
               {platform}
             </a>
           ))}
-          <div className="w-[1px] h-24 bg-gray-700 mt-2" />
+          <div className="w-[0px] h-0 md:w-[1px] h-28 bg-gray-700 mt-2" />
         </motion.div>
       </div>
     </section>

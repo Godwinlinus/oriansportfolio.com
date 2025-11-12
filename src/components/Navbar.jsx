@@ -48,7 +48,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="text-3xl md:hidden text-gray-300 hover:text-blue-400"
+          className="text-3xl md:hidden hover:text-blue-400"
           onClick={() => setIsOpen(!isOpen)}
         >
           ☰
