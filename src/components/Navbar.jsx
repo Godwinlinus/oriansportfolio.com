@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,7 @@ export default function Navbar() {
           className="text-3xl text-cyan-400 md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
-          ☰
+          <FaTimes /> : <FaBars />
         </button>
       </div>
 
