@@ -52,7 +52,7 @@ export default function Navbar() {
           className="text-3xl text-cyan-400 md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <FaTimes /> : <FaBars />
+          <FaBars />
         </button>
       </div>
 
