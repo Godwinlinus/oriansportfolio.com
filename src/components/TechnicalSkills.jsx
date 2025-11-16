@@ -12,6 +12,7 @@ import {
   SiGit,
   SiFigma,
   SiTypescript,
+  SiGraphql,
 } from "react-icons/si";
 
 const skills = [
@@ -26,6 +27,7 @@ const skills = [
   { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
   { name: "Git & GitHub", icon: <SiGit className="text-orange-400" /> },
   { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
+  { name: "Graphql", icon: <SiGraphql className="text-pink-600" /> },
 ];
 
 export default function TechnicalSkills() {
