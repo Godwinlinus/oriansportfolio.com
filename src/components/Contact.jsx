@@ -64,7 +64,7 @@ export default function Contact() {
         ))}
       </div>
       <motion.a
-        href="tel:+2349025372950"
+        href="tel:+2349025372960"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.97 }}
         transition={{ type: "spring", stiffness: 250 }}
