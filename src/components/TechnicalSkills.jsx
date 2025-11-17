@@ -31,7 +31,7 @@ const skills = [
   { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
   { name: "Graphql", icon: <SiGraphql className="text-pink-600" /> },
   { name: "Appwrite", icon: <SiAppwrite className="text-pink-500" /> },
-  { name: "Vercel", icon: <SiVercel className="text-black" /> }
+  { name: "Vercel", icon: <SiVercel className="text-white" /> }
 ];
 
 export default function TechnicalSkills() {
