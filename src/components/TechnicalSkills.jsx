@@ -29,7 +29,7 @@ const skills = [
   { name: "Git & GitHub", icon: <SiGit className="text-orange-400" /> },
   { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
   { name: "Graphql", icon: <SiGraphql className="text-pink-600" /> },
-  { name: "Appwrite", icon: <SiAppwrite className="text-[#FD366E]" /> },
+  { name: "Appwrite", icon: <SiAppwrite className="text-pink-500" /> },
 ];
 
 export default function TechnicalSkills() {
