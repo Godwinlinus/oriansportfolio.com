@@ -14,6 +14,7 @@ import {
   SiTypescript,
   SiGraphql,
   SiAppwrite,
+  SiVercel,
 } from "react-icons/si";
 
 const skills = [
@@ -30,6 +31,7 @@ const skills = [
   { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
   { name: "Graphql", icon: <SiGraphql className="text-pink-600" /> },
   { name: "Appwrite", icon: <SiAppwrite className="text-pink-500" /> },
+  { name: "Vercel", icon: <SiVercel className="text-black" /> }
 ];
 
 export default function TechnicalSkills() {
