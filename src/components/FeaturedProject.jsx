@@ -7,11 +7,13 @@ export default function FeaturedProjects() {
       title: "Skreenly",
       desc: "A sleek and responsive movie discovery web app featuring real-time data from TMDB. Built for smooth performance and delightful UI transitions.",
       tags: ["React", "Tailwind", "Framer Motion", "TMDB", "Appwrite"],
+      href: "https://streamr-gules.vercel.app/"
     },
     {
       title: "Nexus",
       desc: "This project delivers top-tier animation, seamless scalability and a refined UI experience, powered by GSAP. It features a dynamic video background with audio, rotating hero sections and fluid motion architecture.",
       tags: ["React", "Tailwind", "GSAP", "JavaScript"],
+      href: "https://nexus-gamma-sand.vercel.app/"
     },
   ];
 
@@ -31,7 +33,7 @@ export default function FeaturedProjects() {
       </h2>
 
       <p className="text-3xl md:text-4xl font-bold text-gray-100 max-w-3xl leading-snug">
-        Some of my favorite projects — where creativity, code, and caffeine
+        Some of my favourite projects — where creativity, code, and caffeine
         collided perfectly.
       </p>
 
@@ -65,7 +67,7 @@ export default function FeaturedProjects() {
             </div>
 
             <motion.a
-              href="https://streamr-gules.vercel.app/"
+              href={project.href}
               target="_blank"
               whileHover={{ x: 4 }}
               className="mt-6 text-sm text-purple-400 font-semibold cursor-pointer hover:text-cyan-300 transition-colors"
