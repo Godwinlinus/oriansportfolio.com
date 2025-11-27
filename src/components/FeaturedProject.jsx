@@ -8,6 +8,11 @@ export default function FeaturedProjects() {
       desc: "A sleek and responsive movie discovery web app featuring real-time data from TMDB. Built for smooth performance and delightful UI transitions.",
       tags: ["React", "Tailwind", "Framer Motion", "TMDB", "Appwrite"],
     },
+    {
+      title: "Nexus",
+      desc: "This project delivers top-tier animation, seamless scalability and a refined UI experience, powered by GSAP. It features a dynamic video background with audio, rotating hero sections and fluid motion architecture.",
+      tags: ["React", "Tailwind", "GSAP", "JavaScript"],
+    },
   ];
 
   return (
