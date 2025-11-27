@@ -67,7 +67,7 @@ export default function FeaturedProjects() {
             </div>
 
             <motion.a
-              href={project.href}
+              href={proj.href}
               target="_blank"
               whileHover={{ x: 4 }}
               className="mt-6 text-sm text-purple-400 font-semibold cursor-pointer hover:text-cyan-300 transition-colors"
