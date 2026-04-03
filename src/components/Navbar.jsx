@@ -1,18 +1,16 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { motion, AnimatePresence } from "framer-motion";
+import { FaTty } from "react-icons/fa";
+import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "INTRO", href: "#hero" },
     { name: "ABOUT", href: "#about" },
     { name: "SKILLS", href: "#skills" },
     { name: "EXPERIENCE", href: "#experience" },
-    { name: "PROJECTS", href: "#projects" },
-    { name: "STRENGTHS", href: "#resume" },
-    { name: "CONTACT", href: "#contact" },
+    { name: "PROJECTS", href: "#projects" },  
   ];
 
   return (
@@ -24,9 +22,9 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           href="#hero"
-          className="text-sm font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-cyan-400"
+          className="text-3xl font-bold tracking-widest "
         >
-          ORIAN.
+          Orian
         </motion.a>
 
         {/* Desktop Menu */}
@@ -34,43 +32,81 @@ export default function Navbar() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="hidden md:flex text-sm space-x-6 tracking-widest font-light border-l-2 border-gray-700 px-2"
+          className="hidden lg:flex items-center gap-10 text-sm tracking-widest font-light"
         >
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-300 hover:text-blue-400 transition"
+              className="text-yellow"
             >
               {link.name}
             </a>
           ))}
         </motion.div>
 
+        {/* LET'S CONNECT (desktop) */}
+          <motion.button
+            // onClick={toggleTheme}
+            className="hidden lg:flex items-center gap-3 px-3 py-2 transition rounded"
+            aria-label="Let's connect"
+            title="Let's connect"
+          >
+            <p className="text-sm font-medium tracking-tight text-white">LET'S CONNECT</p>
+
+            {/* Motion-wrapped FaTty: rings while hovering the button */}
+            <motion.span
+              // set transform origin so rotate looks like a phone wiggle
+              style={{ originX: 0.5, originY: 0.5 }}
+              initial={{ rotate: 0 }}
+              whileHover={{
+                rotate: [0, -22, 18, -12, 8, -6, 0],
+                y: [0, -1, 0, -1, 0, -0.5, 0],
+                transition: { duration: 0.9, repeat: Infinity, ease: "easeInOut" },
+              }}
+              className="inline-flex border p-2 rounded-full bg-yellow-400"
+              aria-hidden="true"
+            >
+              <FaTty size={30}/>
+            </motion.span>
+          </motion.button>
+
         {/* Mobile Menu Button */}
-        <button
-          className="text-3xl text-cyan-400 md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <FaBars />
-        </button>
+          <motion.button
+              onClick={() => setIsOpen((v) => !v)}
+              className="text-white lg:hidden p-2 transition border rounded hover:scale-110"
+              aria-label="Toggle menu"
+              whileTap={{ scale: 0.95 }}
+            >
+              {isOpen ? <FiX className="w-8 h-8" /> : <FiMenu className="w-8 h-8" />}
+          </motion.button>
       </div>
 
       {/* Mobile Dropdown */}
-      {isOpen && (
-        <div className="md:hidden bg-[#0a0a0a] border-t border-gray-800 flex flex-col px-6 py-4 gap-4 tracking-widest font-bold space-y-3">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-gray-300 text-xl hover:text-blue-400 transition"
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="text-white fixed top-0 left-0 z-50 h-screen w-2/3 p-6 flex flex-col justify-start space-y-6 bg-black lg:hidden"
+            initial={{ opacity: 0, x: "-100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "-100%" }}
+            transition={{ duration: 0.25 }}
+          >
+            <div className="text-3xl font-bold mb-8 border-b pb-4">Orian</div>
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-lg tracking-widest"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+            <button className="px-2 mt-4" />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
