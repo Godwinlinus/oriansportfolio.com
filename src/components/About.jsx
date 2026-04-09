@@ -44,21 +44,18 @@ export default function About() {
         <motion.div
           animate={controls}
           className="absolute -inset-3 blur-xl"
-          style={{
-            background:
-              "radial-gradient(circle at top right, rgba(69, 34, 255, 0.3), transparent 70%), radial-gradient(circle at bottom left, rgba(0, 255, 255, 0.3), transparent 70%)",
-          }}
+
         ></motion.div>
 
-        <motion.div
+        {/* <motion.div
           animate={controls}
           className="absolute -inset-1 rounded-full bg-gradient-to-tr from-cyan-500/30 to-fuchsia-400/30"
-        ></motion.div>
+        ></motion.div> */}
 
         <img
           src="/profile.jpg"
           alt="Linus Mba"
-          className="relative rounded-full border-4 border-transparent w-60 h-60 object-cover shadow-lg shadow-fuchsia-400/20"
+          className="relative"
         />
       </motion.div>
 
@@ -83,7 +80,7 @@ export default function About() {
             rel="noopener noreferrer"
             className="px-10 py-2 bg-cyan-400 hover:bg-fuchsia-400 rounded-full text-black transition-transform duration-300 hover:scale-105"
           >
-            HIRE ME
+            BOOK A CALL
           </a>
           <a
             href="./resume.pdf"

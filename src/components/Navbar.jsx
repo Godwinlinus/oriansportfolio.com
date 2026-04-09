@@ -14,7 +14,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full top-0 z-50 backdrop-blur-md border-b border-gray-800 tracking-widest">
+    <nav className="fixed w-full top-0 z-50 shadow-lg tracking-widest">
       <div className="mx-auto px-6 md:px-20 py-4 flex justify-between items-center">
         {/* Logo / Name */}
         <motion.a
@@ -22,9 +22,9 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           href="#hero"
-          className="text-3xl font-bold tracking-widest "
+          className="text-lg lg:text-3xl font-bold tracking-widest "
         >
-          Orian
+          Godwin
         </motion.a>
 
         {/* Desktop Menu */}

@@ -93,40 +93,10 @@ export default function Hero() {
               />
               <p className="text-sm tracking-widest text-gray-400">HELLO WORLD</p>
             </div>
-            I’m{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-400">
-              Linus Mba.
-            </span>
+            I am Godwin. 
             <br />
-            A Frontend <br /> Engineer & Flutter <br /> Developer
+            A Software <br /> Engineer
           </motion.h1>
-
-          {/* STATS SECTION */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="w-full py-2 max-w-4xl grid grid-cols-3 gap-6 text-center"
-          >
-            {[
-              { number: "3+", label: "Years Experience" },
-              { number: "11+", label: "Projects Completed" },
-              { number: "98%", label: "Client Satisfaction" },
-            ].map((stat, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.05 }}
-                className="bg-[#0a0a0a]/60 backdrop-blur-md border border-white/10 rounded-2xl py-4 hover:border-cyan-400 transition-all"
-              >
-                <h3 className="text-4xl md:text-5xl font-bold text-cyan-400">
-                  {stat.number}
-                </h3>
-                <p className="text-sm md:text-base text-gray-400 mt-2">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
 
         {/* Side Social Links */}
@@ -134,14 +104,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-xs tracking-widest font-light text-center md:flex flex-col items-center z-20"
+          className="text-xs font-light text-center md:flex flex-col items-center z-20"
         >
           {Object.entries(socials).map(([platform, url]) => (
             <a
               key={platform}
               href={url}
               target="_blank"
-              className="py-20 px-1 md:px-0 rotate-270 text-gray-300 hover:text-cyan-400 transition"
+              className="py-10 px-1 md:px-0 rotate-270 text-gray-300 hover:text-cyan-400 transition"
             >
               {platform}
             </a>
