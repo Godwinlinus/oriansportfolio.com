@@ -7,97 +7,71 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "ABOUT", href: "#about" },
-    { name: "SKILLS", href: "#skills" },
-    { name: "EXPERIENCE", href: "#experience" },
-    { name: "PROJECTS", href: "#projects" },  
+    { name: "HELLO", href: "" },
+    { name: "ABOUT", href: "" },
+    { name: "WORK", href: "" },
+    { name: "AWARD", href: "#" }, 
+    { name: "ARTICLES", href: "" }, 
+    { name: "SAY HELLO", href: "" },
   ];
 
   return (
-    <nav className="fixed w-full top-0 z-50 shadow-lg tracking-widest">
-      <div className="mx-auto px-6 md:px-20 py-4 flex justify-between items-center">
-        {/* Logo / Name */}
-        <motion.a
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          href="#hero"
-          className="text-lg lg:text-3xl font-bold tracking-widest "
-        >
-          Godwin
-        </motion.a>
+    <nav className="fixed top-0 left-0 w-full z-50 h-20 bg-surface-dim flex justify-between items-center px-12">
+      {/* Logo / Name */}
+      <motion.a
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        href="#hero"
+        className="text-xl font-serif text-on-background tracking-tighter uppercase font-headline"
+      >
+        Orian
+      </motion.a>
 
-        {/* Desktop Menu */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="hidden lg:flex items-center gap-10 text-sm tracking-widest font-light"
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-yellow"
-            >
-              {link.name}
-            </a>
-          ))}
-        </motion.div>
-
-        {/* LET'S CONNECT (desktop) */}
-          <motion.button
-            // onClick={toggleTheme}
-            className="hidden lg:flex items-center gap-3 px-3 py-2 transition rounded"
-            aria-label="Let's connect"
-            title="Let's connect"
+      {/* Desktop Menu */}
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="hidden md:flex items-center"
+      >
+        {navLinks.map((link) => (
+          <a
+            key={link.name}
+            href={link.href}
+            className="hover:bg-surface-container-high text-primary font-bold px-6 py-2 font-serif text-[12px] uppercase tracking-[0.1em]"
           >
-            <p className="text-sm font-medium tracking-tight text-white">LET'S CONNECT</p>
+            {link.name}
+          </a>
+        ))}
+      </motion.div>
 
-            {/* Motion-wrapped FaTty: rings while hovering the button */}
-            <motion.span
-              // set transform origin so rotate looks like a phone wiggle
-              style={{ originX: 0.5, originY: 0.5 }}
-              initial={{ rotate: 0 }}
-              whileHover={{
-                rotate: [0, -22, 18, -12, 8, -6, 0],
-                y: [0, -1, 0, -1, 0, -0.5, 0],
-                transition: { duration: 0.9, repeat: Infinity, ease: "easeInOut" },
-              }}
-              className="inline-flex border p-2 rounded-full bg-yellow-400"
-              aria-hidden="true"
-            >
-              <FaTty size={30}/>
-            </motion.span>
-          </motion.button>
-
-        {/* Mobile Menu Button */}
-          <motion.button
-              onClick={() => setIsOpen((v) => !v)}
-              className="text-white lg:hidden p-2 transition border rounded hover:scale-110"
-              aria-label="Toggle menu"
-              whileTap={{ scale: 0.95 }}
-            >
-              {isOpen ? <FiX className="w-8 h-8" /> : <FiMenu className="w-8 h-8" />}
-          </motion.button>
-      </div>
+      {/* Mobile Menu Button */}
+        <motion.button
+            onClick={() => setIsOpen((v) => !v)}
+            className="text-primary lg:hidden p-2 transition hover:scale-110"
+            aria-label="Toggle menu"
+            whileTap={{ scale: 0.95 }}
+          >
+            {isOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+        </motion.button>
 
       {/* Mobile Dropdown */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="text-white fixed top-0 left-0 z-50 h-screen w-2/3 p-6 flex flex-col justify-start space-y-6 bg-black lg:hidden"
+            className="text-white fixed top-0 left-0 z-50 h-screen w-2/3 p-6 flex flex-col justify-start space-y-6 bg-surface-dim lg:hidden"
             initial={{ opacity: 0, x: "-100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "-100%" }}
             transition={{ duration: 0.25 }}
           >
-            <div className="text-3xl font-bold mb-8 border-b pb-4">Orian</div>
+            <div className="text-xl font-serif text-on-background tracking-tighter uppercase font-headline mb-8 pb-4">Orian</div>
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-lg tracking-widest"
+                className="hover:bg-surface-container-high text-primary"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

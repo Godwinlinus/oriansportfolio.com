@@ -33,92 +33,50 @@ export default function Hero() {
     pointerY.set(0);
   };
 
-  const socials = {
-    GITHUB: "https://github.com/Godwinlinus",
-    LINKEDIN: "https://linkedin.com/in/godwin-linus-md-4a5082196",
-    INSTAGRAM: "https://www.instagram.com/godwinorian",
-    TWITTER: "https://twitter.com/godwin_orian",
-  };
+
 
   return (
-    <section
+    <hero
       ref={containerRef}
       onMouseMove={handlePointerMove}
       onMouseLeave={handlePointerLeave}
-      className="relative flex flex-col justify-center items-center px-6 md:px-20 pt-40 overflow-hidden"
+      className="relative flex overflow-hidden"
     >
-      {/* BACKGROUND GRID (upper-right half) */}
-      <div className="pointer-events-none absolute w-full h-full md:absolute top-0 right-0 md:w-1/2 md:h-1/2 -z-10 overflow-hidden">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 200 200"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="opacity-20"
-        >
-          <defs>
-            <pattern
-              id="gridPattern"
-              width="20"
-              height="20"
-              patternUnits="userSpaceOnUse"
-            >
-              <path
-                d="M 20 0 L 0 0 0 20"
-                stroke="rgba(255,255,255,0.1)"
-                strokeWidth="1"
-              />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#gridPattern)" />
-        </svg>
-      </div>
 
       {/* Main content */}
-      <div className="w-full md:flex flex-row justify-between items-center text-left z-10">
-        <div className="flex flex-col mb-20 md:mb-0">
-          <motion.h1
+      <div 
+        className="min-h-[884px] flex flex-col justify-center px-12 md:px-24 relative z-10"
+        data-stitch-vh="min-h-[884px]===min-h-screen"
+      >
+        <div className="max-w-5xl">
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-8xl lg:text-8xl font-bold leading-tight text-gray-100 mb-4"
+            className="font-label text-primary uppercase tracking-[0.4em] text-sm mb-8"
           >
-            <div className="flex gap-6 items-center font-light mb-6">
-              <motion.div
-                initial={{ rotate: 0 }}
-                animate={{ rotate: 360 }}
-                transition={{ duration: 1.2, repeat: Infinity, ease: "linear" }}
-                className="w-[1px] h-14 bg-gray-700 mt-2"
-              />
-              <p className="text-sm tracking-widest text-gray-400">HELLO WORLD</p>
+            Selected Portfolio {new Date().getFullYear()}
+          </motion.p> 
+          <h1 className="font-headline text-6xl md:text-[8rem] leading-[0.9] font-light text-on-background mb-12">
+            I am Godwin. <br />
+            <span className="italic text-primary-fixed-dim">
+              A Software Engineer
+            </span>
+          </h1>
+          <div className="flex flex-col md:flex-row gap-12 mt-16 items-start md:items-center">
+            <div className="flex items-center gap-4 group cursor-pointer">
+              <div className="w-12 h-[1px] bg-primary group-hover:w-20 transition-all duration-500"></div>
+              <span className="font-label uppercase tracking-widest text-xs">
+                Explore My Works
+              </span>
             </div>
-            I am Godwin. 
-            <br />
-            A Software <br /> Engineer
-          </motion.h1>
+            <p className="max-w-md font-body text-on-surface-variant text-lg leading-relaxed">
+              Crafting digital excellence through architectural precision and
+              minimalist aesthetics. Specialized in high-performance web systems.
+            </p>
+          </div>             
         </div>
-
-        {/* Side Social Links */}
-        <motion.div
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-xs font-light text-center md:flex flex-col items-center z-20"
-        >
-          {Object.entries(socials).map(([platform, url]) => (
-            <a
-              key={platform}
-              href={url}
-              target="_blank"
-              className="py-10 px-1 md:px-0 rotate-270 text-gray-300 hover:text-cyan-400 transition"
-            >
-              {platform}
-            </a>
-          ))}
-          <div className="w-[0px] h-0 md:w-[1px] h-28 bg-gray-700 mt-2" />
-        </motion.div>
       </div>
-    </section>
+    </hero>
   );
 }

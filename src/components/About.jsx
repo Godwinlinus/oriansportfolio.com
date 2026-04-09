@@ -66,8 +66,8 @@ export default function About() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-lg font-bold mb-4 tracking-widest text-fuchsia-400">ABOUT ME</h2>
-        <p className="text-xl text-gray-300 mb-6 font-light leading-relaxed">
+        <h2 className="text-lg font-bold mb-4 tracking-widest">ABOUT ME</h2>
+        <p className="text-lg mb-6 font-light leading-relaxed">
           I’m Dr. Linus Mba, a front-end engineer and medical doctor driven 
           by vision and precision. I craft digital experiences that merge design, 
           logic, and emotion—turning abstract ideas into seamless, high-performing 

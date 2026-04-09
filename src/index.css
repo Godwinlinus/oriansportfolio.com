@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 @import "tailwindcss";
 
 html {
@@ -5,26 +6,88 @@ html {
 }
 
 @theme {
-  --font-display: "Merriweather", serif;
-  --color-background-white: #F3F3F3;
-  --color-background-black: #07000B;
-  --color-soft-black: #181A18;
-  --color-deep-black: #252324;
-  --color-bluish-black: #1A1A1D;
-  --color-text-black: #121212;
-  --color-text-white: #FFFFFF;
-  --color-main-grey: #606060;
-  --color-golden: #FFD700;
+  --color-surface-tint: #ffba38;
+  --color-primary: #ffd79b;
+  --color-inverse-primary: #7e5700;
+  --color-tertiary-fixed-dim: #43d6ff;
+  --color-on-surface-variant: #d6c4ac;
+  --color-outline: #9e8e78;
+  --color-on-secondary-container: #dbb270;
+  --color-primary-container: #ffb300;
+  --color-error: #ffb4ab;
+  --color-primary-fixed-dim: #ffba38;
+  --color-secondary-fixed: #ffdeac;
+  --color-primary-fixed: #ffdeac;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-on-primary-fixed-variant: #604100;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-outline-variant: #514532;
+  --color-on-secondary: #432c00;
+  --color-on-secondary-fixed-variant: #5e4109;
+  --color-surface-bright: #393939;
+  --color-surface: #131313;
+  --color-on-tertiary-fixed: #001f28;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container: #201f1f;
+  --color-surface-dim: #131313;
+  --color-secondary-fixed-dim: #eac07d;
+  --color-on-error-container: #ffdad6;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-variant: #353534;
+  --color-tertiary-container: #00d2fe;
+  --color-on-primary: #432c00;
+  --color-surface-container-highest: #353534;
+  --color-secondary-container: #61440c;
+  --color-tertiary: #a4e7ff;
+  --color-inverse-surface: #e5e2e1;
+  --color-on-tertiary: #003543;
+  --color-inverse-on-surface: #313030;
+  --color-background: #131313;
+  --color-on-tertiary-container: #00566a;
+  --color-tertiary-fixed: #b5ebff;
+  --color-secondary: #eac07d;
+  --color-on-secondary-fixed: #281900;
+  --color-on-tertiary-fixed-variant: #004e60;
+  --color-on-background: #e5e2e1;
+  --color-on-surface: #e5e2e1;
+  --color-on-primary-fixed: #281900;
+  --color-on-primary-container: #6b4900;
 
+  /* fonts */
+  --font-headline: "GFS Didot", serif;
+  --font-inter: "Inter", sans-serif;
+  --font-newsreader: "Newsreader", serif;
 }
 
 body {
-  background-color: var(--color-background-black);
-  color: var(--color-text-black);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: var(--font-inter);
+  min-height: 100vh;
+  margin: 0;
+  color: var(--color-on-background);
+  background-color: var(--color-surface-dim);
 }
 
-html.dark body {
-  background-color: var(--color-background-black);
-  color: var(--color-text-white);
+hero {
+  background:
+    radial-gradient(circle at center,
+      transparent 0px 150px,
+      rgba(255, 215, 155, 0.03) 150px 152px,
+
+      transparent 152px 300px,
+      rgba(255, 215, 155, 0.03) 300px 302px,
+
+      transparent 302px 450px,
+      rgba(255, 215, 155, 0.03) 450px 452px,
+
+      transparent 452px 600px,
+      rgba(255, 215, 155, 0.03) 600px 602px,
+
+      transparent 602px
+    ),
+    #131313;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
 }

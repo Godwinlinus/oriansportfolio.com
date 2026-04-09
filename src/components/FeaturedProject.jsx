@@ -23,14 +23,30 @@ export default function FeaturedProjects() {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="relative flex flex-col gap-12 px-6 md:px-20 py-24 max-w-6xl mx-auto"
+      className="py-32 px-12 md:px-24 relative z-10 bg-surface"
     >
-      {/* Subtle floating gradient background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(168,85,247,0.05),_transparent_60%),_radial-gradient(ellipse_at_bottom_left,_rgba(34,211,238,0.05),_transparent_60%)] blur-2xl" />
+      <div className="flex justify-between items-end mb-24">
+        <h2 className="font-headline text-5xl md:text-7xl">
+          Featured 
+          <br/>
+          <span className="italic">Creations</span>
+        </h2>
+        <span className="font-label text-[10px] text-outline tracking-[0.5em] mb-4 uppercase">01 — Projects</span>
+      </div>
 
-      <h2 className="text-sm md:text-base text-purple-400 tracking-[0.25em] mb-4 font-semibold">
-        PROJECTS
-      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+        {/* Large Project Card */}
+        <div className="md:col-span-8 group">
+          <div className="aspect-[16/9] bg-surface-container-low overflow-hidden relative">
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+      
 
       <p className="text-3xl md:text-4xl font-bold text-gray-100 max-w-3xl leading-snug">
         Some of my favourite projects — where creativity, code, and caffeine

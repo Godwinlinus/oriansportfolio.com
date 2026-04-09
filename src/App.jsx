@@ -10,28 +10,28 @@ import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import TechnicalSkills from "./components/TechnicalSkills";
 import FeaturedPorjects from "./components/FeaturedProject";
+import Aside from "./components/Aside";
 
 export default function App() {
   const controls = useAnimation();
   return (
-    <div className="relative font-['Inter'] text-white scroll-smooth overflow-hidden bg-[#0a0a0a]">
-      {/* Animated Worm Gradient Background */}
-      <motion.div
-        animate={controls}
-        className="absolute inset-0 -z-10 transition-all duration-1000"
-      ></motion.div>
-
+    <div className="relative scroll-smooth overflow-hidden">
       <Navbar />
-      <section id="hero">
-        <Hero />
-      </section>
-      <About />
-      <TechnicalSkills />
-      <Experience />
-      <FeaturedPorjects />
-      <Resume />
-      <Contact />
-      <Footer />
+      <Aside />
+      <main className="relative pt-20">
+        <section id="hero">
+          <Hero />
+        </section>
+        <FeaturedPorjects />
+        <About />
+        <TechnicalSkills />
+        <Experience />
+        
+        <Resume />
+        <Contact />
+        <Footer />
+      </main>
+      
     </div>
   );
 }
