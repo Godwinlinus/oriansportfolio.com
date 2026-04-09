@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PiDatabaseBold } from "react-icons/pi";
+import { BsLayersFill } from "react-icons/bs";
+import { MdOutlineSettingsInputComposite } from "react-icons/md";
 
 const educationData = [
   {
@@ -58,76 +61,61 @@ const experienceData = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="px-6 py-20">
+    <section id="experience" className="py-32 px-12 md:px-24 bg-surface border-b border-outline-variant/10">
       {/* Card wrapper */}
       <motion.div
         initial={{ opacity: 0, y: 18 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-6xl mx-auto bg-white/95 rounded-3xl shadow-xl border border-gray-100 p-6 md:p-10"
+        className="max-w-7xl mx-auto"
       >
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Experience Column */}
-          <div>
-            <motion.h2
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-sm tracking-widest text-gray-900 mb-8"
-            >
-              EXPERIENCE
-            </motion.h2>
-
-            <div className="relative pl-6">
-              {/* vertical line */}
-              <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-400" />
-              {experienceData.map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.06 * idx, duration: 0.6 }}
-                  className="mb-10 relative pl-6"
-                >
-                  <span className="absolute -left-7 top-1 w-3 h-3 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-400 ring-4 ring-white" />
-                  <h3 className="text-lg font-semibold text-gray-800">{item.company}</h3>
-                  <p className="text-sm text-gray-600 mt-1">{item.role}</p>
-                  <p className="text-xs text-gray-400 mt-1 mb-3">{item.period}</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">{item.description}</p>
-                </motion.div>
-              ))}
+        <div className="mb-20">
+          <span className="font-label text-[10px] text-outline tracking-[0.5em] uppercase block mb-8" >
+            Professional Path
+          </span>
+          <div className="space-y-0">
+            <div className="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/20 hover:bg-surface-container-high px-8 transition-colors group">
+              <span className="font-body text-outline group-hover:text-primary">
+                2021 - Present
+              </span>
+              <h3 className="font-headline text-3xl">Lead Architect at Obsidian Labs</h3>
+              <span className="font-label text-[10px] tracking-widest uppercase">Senior Engineer</span>
+            </div>
+            <div className="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/20 hover:bg-surface-container-high px-8 transition-colors group">
+              <span className="font-body text-outline group-hover:text-primary">2018 — 2021</span>
+              <h3 className="font-headline text-3xl">Full Stack Developer at Neural Core</h3>
+              <span className="font-label text-[10px] tracking-widest uppercase">Mid-Level</span>
+            </div>
+            <div className="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/20 hover:bg-surface-container-high px-8 transition-colors group">
+              <span className="font-body text-outline group-hover:text-primary">2016 — 2018</span>
+              <h3 className="font-headline text-3xl">Junior Frontend dev at Prism Agency</h3>
+              <span className="font-label text-[10px] tracking-widest uppercase">Creative Tech</span>
             </div>
           </div>
-
-          {/* Education Column */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-          >
-            <h2 className="text-sm tracking-widest text-gray-800 mb-8">EDUCATION</h2>
-
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-400" />
-              {educationData.map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.08 * idx + 0.2, duration: 0.6 }}
-                  className="mb-10 relative pl-6"
-                >
-                  <span className="absolute -left-7 top-1 w-3 h-3 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-400 ring-4 ring-white" />
-                  <h3 className="text-lg font-semibold text-gray-800">{item.company}</h3>
-                  <p className="text-sm text-gray-600 mt-1">{item.role}</p>
-                  <p className="text-xs text-gray-400 mt-1 mb-3">{item.period}</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </div>
-      </motion.div>
+        <div>
+          <span className="font-label text-[10px] text-outline tracking-[0.5em] uppercase block mb-8" >
+            Academic Background
+          </span>
+          <div className="space-y-0">
+            <div className="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/20 hover:bg-surface-container-high px-8 transition-colors group">
+              <span className="font-body text-outline group-hover:text-primary">2016 — 2025</span>
+              <h3 className="font-headline text-3xl">MBBS</h3>
+              <span className="font-label textsm tracking-widest uppercase">University of Jos</span>
+            </div>
+            <div className="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/20 hover:bg-surface-container-high px-8 transition-colors group">
+              <span className="font-body text-outline group-hover:text-primary">2023-2024</span>
+              <h3 className="font-headline text-3xl"> CS50</h3>
+              <span className="font-label text-sm tracking-widest uppercase">Harvard University (edX)</span>
+            </div>
+            <div className="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/20 hover:bg-surface-container-high px-8 transition-colors group">
+              <span className="font-body text-outline group-hover:text-primary">2023-2024</span>
+              <h3 className="font-headline text-3xl">Data Analysis Bootcamp</h3>
+              <span className="font-label text-sm tracking-widest uppercase">with alexandra Freberg</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>  
     </section>
   );
 };

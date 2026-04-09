@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Resume from "./components/Resume";
+// import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
@@ -23,11 +23,14 @@ export default function App() {
           <Hero />
         </section>
         <FeaturedPorjects />
-        <About />
         <TechnicalSkills />
+        <About />
         <Experience />
         
-        <Resume />
+        
+        
+        
+        {/* <Resume /> */}
         <Contact />
         <Footer />
       </main>

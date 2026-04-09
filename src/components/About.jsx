@@ -6,89 +6,56 @@ export default function About() {
   const controls = useAnimation();
 
   // loop through dynamic water-like shape changes
-  useEffect(() => {
-    const animateShape = async () => {
-      while (true) {
-        await controls.start({
-          borderRadius: [
-            "40% 60% 60% 40%",
-            "50% 50% 40% 60%",
-            "60% 40% 50% 50%",
-            "50% 60% 40% 50%",
-            "40% 60% 60% 40%",
-          ],
-          scale: [1, 1.05, 1, 1.05, 1],
-          transition: {
-            duration: 6,
-            ease: "easeInOut",
-            repeat: Infinity,
-          },
-        });
-      }
-    };
-    animateShape();
-  }, [controls]);
 
   return (
     <section
       id="about"
-      className="px-6 md:px-20 py-20 max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center"
+      className="py-32 bg-surface-container-lowest border-y border-outline-variant/10"
     >
       {/* Profile Image with Water Border */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="relative flex justify-center items-center mt-12 md:mt-0"
+        className="max-w-7xl mx-auto px-12 md:px-24"
       >
         <motion.div
-          animate={controls}
-          className="absolute -inset-3 blur-xl"
+          className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center"
 
-        ></motion.div>
-
-        {/* <motion.div
-          animate={controls}
-          className="absolute -inset-1 rounded-full bg-gradient-to-tr from-cyan-500/30 to-fuchsia-400/30"
-        ></motion.div> */}
-
-        <img
-          src="/profile.jpg"
-          alt="Linus Mba"
-          className="relative"
-        />
-      </motion.div>
-
-      {/* Text Section */}
-      <motion.div
-        initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-lg font-bold mb-4 tracking-widest">ABOUT ME</h2>
-        <p className="text-lg mb-6 font-light leading-relaxed">
-          I’m Dr. Linus Mba, a front-end engineer and medical doctor driven 
-          by vision and precision. I craft digital experiences that merge design, 
-          logic, and emotion—turning abstract ideas into seamless, high-performing 
-          interfaces. Every project is a chance to build something that lasts, grows, and inspires.
-        </p>
-        <div className="flex gap-4 flex-wrap tracking-widest font-semibold">
-          <a
-            href="mailto:linusgodwin2@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-10 py-2 bg-cyan-400 hover:bg-fuchsia-400 rounded-full text-black transition-transform duration-300 hover:scale-105"
-          >
-            BOOK A CALL
-          </a>
-          <a
-            href="./resume.pdf"
-            className="px-8 py-2 bg-cyan-400 hover:bg-fuchsia-400 rounded-full text-black transition-transform duration-300 hover:scale-105"
-          >
-            DOWNLOAD CV
-          </a>
-        </div>
+        >
+          <div>
+            <h2 className="font-headline text-4xl md:text-6xl leading-tight mb-12">
+              Engineering as an <span className="italic text-primary">Art Form</span>
+            </h2>
+            <div className="space-y-8">
+              <div className="group border-b border-outline-variant/20 pb-6">
+                <h4 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors">
+                  01. Intentionality
+                </h4>
+                <p className="font-body text-on-surface-variant text-sm">Every line of code serves a purpose. No bloat, no excess, only pure performance.</p>
+              </div>
+              <div className="group border-b border-outline-variant/20 pb-6">
+                <h4 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors">02. Longevity</h4>
+                <p className="font-body text-on-surface-variant text-sm">Building systems that transcend trends and remain robust through shifts in the tech landscape.</p>
+              </div>
+              <div className="group border-b border-outline-variant/20 pb-6">
+                <h4 className="font-headline text-2xl mb-2 group-hover:text-primary transition-colors">03. Clarity</h4>
+                <p className="font-body text-on-surface-variant text-sm">Complex logic reduced to elegant, understandable architectural patterns.</p>
+              </div>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="absolute -top-12 -left-12 w-32 h-32 border-t border-l border-primary/30"></div>
+            <img
+              src="/profile.jpg"
+              alt="Linus Mba"
+              className="w-full grayscale brightness-75 hover:brightness-100 transition-all duration-1000"
+            />
+            <div className="absolute -bottom-8 -right-8 p-12 bg-primary text-on-primary">
+              <p className="font-headline text-4xl italic">"Silent strength."</p>
+            </div>
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );
