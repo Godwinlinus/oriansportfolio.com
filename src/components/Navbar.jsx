@@ -33,7 +33,7 @@ export default function Navbar() {
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="hidden md:flex items-center"
+        className="hidden lg:flex items-center"
       >
         {navLinks.map((link) => (
           <a

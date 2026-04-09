@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { MdArrowOutward } from "react-icons/md";
 
 export default function FeaturedProjects() {
   const projects = [
@@ -39,11 +40,80 @@ export default function FeaturedProjects() {
         <div className="md:col-span-8 group">
           <div className="aspect-[16/9] bg-surface-container-low overflow-hidden relative">
 
+            {/* image here */}
+            <img 
+              className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700"
+              src="" 
+              alt="" />
+            <div className="absolute bottom-0 left-0 p-8 bg-surface/80 backdrop-blur-md">
+              <span className="text-primary font-label text-[10px] tracking-widest uppercase">System Design</span>
+            </div>
           </div>
 
+          <div className="mt-8">
+            <h3 className="font-headline text-3xl mb-4">
+              Neural Architecture v2 
+            </h3>
+            <p className="font-body text-on-surface-variant max-w-lg">A decentralized infrastructure focusing on low-latency data processing and real-time visualization for financial clusters.</p>
+          </div>
         </div>
 
+        {/* vertical offset card */}
+        <div className="md:col-span-4 md:mt-32 group">
+          <div className="aspect-[3/4] bg-surface-container-low overflow-hidden relative">
 
+          {/* imag here */}
+          <img 
+            className="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
+            src="" 
+            alt="" />
+            <div className="text-primary absolute top-0 right-0 p-8">
+              <MdArrowOutward size={30} />
+            </div>
+          </div>
+          <div className="8">
+            <h3 className="font-headline text-2xl mb-4 italic">
+              Gsap Core
+            </h3>
+            <p className="font-body text-sm text-on-surface-variant uppercase tracking-widest">Interactive UI / 2024</p>
+          </div>
+        </div>
+
+        {/* small grid items  */}
+        <div className="md:col-span-4 group">
+          <div className="aspect-square bg-surface-container-low overflow-hidden relative">
+            <img 
+              className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 transition-all duration-700"
+              src="" 
+              alt="" />
+          </div>
+          <div className="mt-6">
+            <h3 className="font-headline text-xl">
+              The Obsidian API
+            </h3>
+            <div className="w-8 h-[1px] bg-outline-variant my-4">
+              <span className="font-label text-[10px] text-outline uppercase tracking-widest">
+                Backend Engineering
+              </span>
+            </div>
+          </div>
+
+          <div className="md:col-span-4 md:mt-24 group">
+            <div className="aspect-square bg-surface-container-low overflow-hidden relative">
+              <img 
+                className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 transition-all duration-700"
+                src="" 
+                alt="" />
+            </div>
+            <div className="mt-6">
+              <h3 className="font-headline text-xl">
+                Brutalist Framework
+              </h3>
+              <div className="w-8 h-[1px] bg-outline-variant my-4"></div>
+              <span className="font-label text-[10px] text-outline uppercase tracking-widest">Library Design</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       
