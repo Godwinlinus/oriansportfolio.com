@@ -50,6 +50,9 @@ export default function Navbar() {
 
       {/* Mobile Menu Button */}
         <motion.button
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
             onClick={() => setIsOpen((v) => !v)}
             className="text-primary lg:hidden p-2 transition hover:scale-110"
             aria-label="Toggle menu"

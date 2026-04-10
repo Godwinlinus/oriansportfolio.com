@@ -74,7 +74,7 @@ body {
     transform: scale(1);
   }
   40% {
-    opacity: 1;   /* equals primary/10 visually stronger */
+    opacity: 2;   /* equals primary/10 visually stronger */
     transform: scale(1.02);
   }
   100% {
