@@ -16,7 +16,7 @@ const Aside = () => {
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="fixed right-0 top-0 h-full w-16 bg-transparent flex flex-col justify-center items-center gap-12 z-40 hidden md:flex"
+            className="fixed right-0 top-0 h-full w-16 bg-transparent flex flex-col justify-center items-center gap-20 z-40 hidden md:flex"
         >
             {Object.entries(socials).map(([platform, url]) => (
             <a

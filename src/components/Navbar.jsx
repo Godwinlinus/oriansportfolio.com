@@ -7,16 +7,18 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "HELLO", href: "" },
-    { name: "ABOUT", href: "" },
-    { name: "WORK", href: "" },
+    { name: "HELLO", href: "#hero" },
+    { name: "ABOUT", href: "#about" },
+    { name: "WORK", href: "#work" },
     { name: "AWARD", href: "#" }, 
-    { name: "ARTICLES", href: "" }, 
-    { name: "SAY HELLO", href: "" },
+    { name: "ARTICLES", href: "#" }, 
+    { name: "RESUME", href: "resume.pdf"},
+    { name: "SAY HELLO", href: "#contact" },
+
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 h-20 bg-surface-dim flex justify-between items-center px-12">
+    <nav className="fixed top-0 left-0 w-full z-50 h-20 bg-surface-dim flex justify-between items-center px-12 shadow-sm">
       {/* Logo / Name */}
       <motion.a
         initial={{ opacity: 0, x: -30 }}
@@ -60,13 +62,13 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="text-white fixed top-0 left-0 z-50 h-screen w-2/3 p-6 flex flex-col justify-start space-y-6 bg-surface-dim lg:hidden"
+            className="text-white fixed top-0 left-0 z-50 h-screen w-2/3 p-6 flex flex-col justify-start space-y-6 bg-surface-dim lg:hidden bg-surface border-r border-outline-variant/10"
             initial={{ opacity: 0, x: "-100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "-100%" }}
             transition={{ duration: 0.25 }}
           >
-            <div className="text-xl font-serif text-on-background tracking-tighter uppercase font-headline mb-8 pb-4">Orian</div>
+            <div className="text-xl font-serif text-on-background tracking-tighter uppercase font-headline mb-8 pb-6 border-b border-outline-variant/10">Orian</div>
             {navLinks.map((link) => (
               <a
                 key={link.name}

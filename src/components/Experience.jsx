@@ -9,15 +9,11 @@ const educationData = [
     company: "University of Jos, Nigeria",
     role: "Bachelor of Medicine, Bachelor of Surgery",
     period: "2025",
-    description:
-      "Clinical training and academic leadership. Coordinated projects, led student initiatives, and supported digital health interventions.",
   },
   {
     company: "Harvard University (edX)",
     role: "CS50’s Web Programming with Python and JavaScript",
     period: "2024",
-    description:
-      "Completed CS50 Web Programming program covering Python, JavaScript, SQL, and modern web development practices.",
   },
   {
     company: "Data Analysis Bootcamp with Alexandra Freberg",
@@ -83,12 +79,12 @@ const Experience = () => {
             </div>
             <div className="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/20 hover:bg-surface-container-high px-8 transition-colors group">
               <span className="font-body text-outline group-hover:text-primary">2018 — 2021</span>
-              <h3 className="font-headline text-3xl">Full Stack Developer at Neural Core</h3>
+              <h3 className="font-headline text-3xl text-center">Full Stack Developer at Neural Core</h3>
               <span className="font-label text-[10px] tracking-widest uppercase">Mid-Level</span>
             </div>
             <div className="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/20 hover:bg-surface-container-high px-8 transition-colors group">
               <span className="font-body text-outline group-hover:text-primary">2016 — 2018</span>
-              <h3 className="font-headline text-3xl">Junior Frontend dev at Prism Agency</h3>
+              <h3 className="font-headline text-3xl text-center">Junior Frontend dev at Prism Agency</h3>
               <span className="font-label text-[10px] tracking-widest uppercase">Creative Tech</span>
             </div>
           </div>
@@ -101,17 +97,17 @@ const Experience = () => {
             <div className="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/20 hover:bg-surface-container-high px-8 transition-colors group">
               <span className="font-body text-outline group-hover:text-primary">2016 — 2025</span>
               <h3 className="font-headline text-3xl">MBBS</h3>
-              <span className="font-label textsm tracking-widest uppercase">University of Jos</span>
+              <span className="font-label text-[10px] tracking-widest uppercase">University of Jos</span>
             </div>
             <div className="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/20 hover:bg-surface-container-high px-8 transition-colors group">
-              <span className="font-body text-outline group-hover:text-primary">2023-2024</span>
-              <h3 className="font-headline text-3xl"> CS50</h3>
-              <span className="font-label text-sm tracking-widest uppercase">Harvard University (edX)</span>
+              <span className="font-body text-outline group-hover:text-primary">2023 — 2024</span>
+              <h3 className="font-headline text-3xl">CS50</h3>
+              <span className="font-label text-[10px] tracking-widest uppercase">Harvard University (edX)</span>
             </div>
             <div className="flex flex-col md:flex-row justify-between items-center py-10 border-b border-outline-variant/20 hover:bg-surface-container-high px-8 transition-colors group">
-              <span className="font-body text-outline group-hover:text-primary">2023-2024</span>
-              <h3 className="font-headline text-3xl">Data Analysis Bootcamp</h3>
-              <span className="font-label text-sm tracking-widest uppercase">with alexandra Freberg</span>
+              <span className="font-body text-outline group-hover:text-primary">2023 — 2024</span>
+              <h3 className="font-headline text-3xl text-center">Data Analysis Bootcamp</h3>
+              <span className="font-label text-[10px] tracking-widest uppercase">with alexandra Freberg</span>
             </div>
           </div>
         </div>

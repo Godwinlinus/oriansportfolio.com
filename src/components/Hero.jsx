@@ -2,44 +2,11 @@ import React, { useRef } from "react";
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 
 export default function Hero() {
-  const containerRef = useRef(null);
-
-  // normalized pointer values (-1 .. 1)
-  const pointerX = useMotionValue(0);
-  const pointerY = useMotionValue(0);
-
-  // smooth the motion (spring gives a pleasant lag)
-  const springX = useSpring(pointerX, { stiffness: 120, damping: 20 });
-  const springY = useSpring(pointerY, { stiffness: 120, damping: 20 });
-
-  // pointer handler: compute relative cursor position inside the hero
-  const handlePointerMove = (e) => {
-    const rect = containerRef.current?.getBoundingClientRect();
-    if (!rect) return;
-
-    const cx = e.clientX - rect.left;
-    const cy = e.clientY - rect.top;
-
-    const nx = (cx - rect.width / 2) / (rect.width / 2);
-    const ny = (cy - rect.height / 2) / (rect.height / 2);
-
-    const clamp = (v) => Math.max(-1, Math.min(1, v));
-    pointerX.set(clamp(nx));
-    pointerY.set(clamp(ny));
-  };
-
-  const handlePointerLeave = () => {
-    pointerX.set(0);
-    pointerY.set(0);
-  };
-
 
 
   return (
     <hero
-      ref={containerRef}
-      onMouseMove={handlePointerMove}
-      onMouseLeave={handlePointerLeave}
+      id="hero"
       className="relative flex overflow-hidden"
     >
 
@@ -64,15 +31,18 @@ export default function Hero() {
             </span>
           </h1>
           <div className="flex flex-col md:flex-row gap-12 mt-16 items-start md:items-center">
-            <div className="flex items-center gap-4 group cursor-pointer">
+            <a 
+              href="#work"
+              className="flex items-center gap-4 group cursor-pointer"
+              >
               <div className="w-12 h-[1px] bg-primary group-hover:w-20 transition-all duration-500"></div>
               <span className="font-label uppercase tracking-widest text-xs">
                 Explore My Works
               </span>
-            </div>
+            </a>
             <p className="max-w-md font-body text-on-surface-variant text-lg leading-relaxed">
-              Crafting digital excellence through architectural precision and
-              minimalist aesthetics. Specialized in high-performance web systems.
+              Fueled by  deep curiosity for technology and an obsession with solving real problems, i've led and collaborated 
+              on initiatives that reshaped the fintech, healthcare and eCommerce space.
             </p>
           </div>             
         </div>

@@ -67,27 +67,3 @@ body {
   color: var(--color-on-background);
   background-color: var(--color-surface-dim);
 }
-
-hero {
-  background:
-    radial-gradient(circle at center,
-      transparent 0px 150px,
-      rgba(255, 215, 155, 0.03) 150px 152px,
-
-      transparent 152px 300px,
-      rgba(255, 215, 155, 0.03) 300px 302px,
-
-      transparent 302px 450px,
-      rgba(255, 215, 155, 0.03) 450px 452px,
-
-      transparent 452px 600px,
-      rgba(255, 215, 155, 0.03) 600px 602px,
-
-      transparent 602px
-    ),
-    #131313;
-
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: auto;
-}

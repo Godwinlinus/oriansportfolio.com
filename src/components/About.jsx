@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-32 bg-surface-container-lowest border-y border-outline-variant/10"
+      className="py-32 bg-surface-container-lowest border-y border-outline-variant/10 bg-transperant"
     >
       {/* Profile Image with Water Border */}
       <motion.div
@@ -51,7 +51,7 @@ export default function About() {
               alt="Linus Mba"
               className="w-full grayscale brightness-75 hover:brightness-100 transition-all duration-1000"
             />
-            <div className="absolute -bottom-8 -right-8 p-12 bg-primary text-on-primary">
+            <div className="absolute -bottom-8 -right-8 p-8 md:p-12 bg-primary text-on-primary">
               <p className="font-headline text-4xl italic">"Silent strength."</p>
             </div>
           </div>

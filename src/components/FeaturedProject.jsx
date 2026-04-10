@@ -20,7 +20,7 @@ export default function FeaturedProjects() {
 
   return (
     <motion.section
-      id="projects"
+      id="work"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -43,7 +43,7 @@ export default function FeaturedProjects() {
             {/* image here */}
             <img 
               className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700"
-              src="" 
+              src="\images\ai_assistant.png" 
               alt="" />
             <div className="absolute bottom-0 left-0 p-8 bg-surface/80 backdrop-blur-md">
               <span className="text-primary font-label text-[10px] tracking-widest uppercase">System Design</span>
@@ -65,7 +65,7 @@ export default function FeaturedProjects() {
           {/* imag here */}
           <img 
             className="w-full h-full object-cover grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" 
-            src="" 
+            src=" " 
             alt="" />
             <div className="text-primary absolute top-0 right-0 p-8">
               <MdArrowOutward size={30} />
@@ -97,21 +97,22 @@ export default function FeaturedProjects() {
               </span>
             </div>
           </div>
+        </div> 
+          
 
-          <div className="md:col-span-4 md:mt-24 group">
-            <div className="aspect-square bg-surface-container-low overflow-hidden relative">
-              <img 
-                className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 transition-all duration-700"
-                src="" 
-                alt="" />
-            </div>
-            <div className="mt-6">
-              <h3 className="font-headline text-xl">
-                Brutalist Framework
-              </h3>
-              <div className="w-8 h-[1px] bg-outline-variant my-4"></div>
-              <span className="font-label text-[10px] text-outline uppercase tracking-widest">Library Design</span>
-            </div>
+        <div className="md:col-span-4 md:mt-24 group">
+          <div className="aspect-square bg-surface-container-low overflow-hidden relative">
+            <img 
+              className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 transition-all duration-700"
+              src="" 
+              alt="" />
+          </div>
+          <div className="mt-6">
+            <h3 className="font-headline text-xl">
+              Brutalist Framework
+            </h3>
+            <div className="w-8 h-[1px] bg-outline-variant my-4"></div>
+            <span className="font-label text-[10px] text-outline uppercase tracking-widest">Library Design</span>
           </div>
         </div>
       </div>

@@ -75,10 +75,10 @@ export default function Contact() {
                 <span className="w-16 h-16 rounded-full border border-primary/30 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-500">
                   <span className="text-primary group-hover:text-on-primary transition-colors">
                     <MdArrowForward size={24} />
-                  </span>
-                  <span className="font-label uppercase tracking-[0.3em] text-xs">
-                    Start a conversation
-                  </span>
+                  </span> 
+                </span>
+                <span className="font-label uppercase tracking-[0.3em] text-xs">
+                  Start a conversation
                 </span>
               </a>
             </div>
