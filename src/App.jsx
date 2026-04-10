@@ -20,7 +20,11 @@ export default function App() {
       <Navbar />
       <Aside />
       <main className="relative pt-20">
-        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <motion.div 
+        initial={{ opacity: 0, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
           {rings.map((size, index) => (
             <div
               key={size}
@@ -32,11 +36,11 @@ export default function App() {
                 width: `${size}px`,
                 height: `${size}px`,
                 opacity: 0.5,
-                animationDelay: `${index * 0.4}s`,
+                animationDelay: `${index * 0.5}s`,
               }}
             />
           ))}
-        </div>
+        </motion.div>
         <section id="hero">
           <Hero />
         </section>
