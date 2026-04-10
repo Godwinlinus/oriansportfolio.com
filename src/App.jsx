@@ -21,9 +21,6 @@ export default function App() {
       <Aside />
       <main className="relative pt-20">
         <motion.div 
-        initial={{ opacity: 0, y: 0 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1 }}
         className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
           {rings.map((size, index) => (
             <div
@@ -36,7 +33,7 @@ export default function App() {
                 width: `${size}px`,
                 height: `${size}px`,
                 opacity: 0.5,
-                animationDelay: `${index * 0.5}s`,
+                animationDelay: `${index * 0.8}s`,
               }}
             />
           ))}
