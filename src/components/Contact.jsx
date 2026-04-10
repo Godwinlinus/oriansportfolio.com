@@ -1,5 +1,4 @@
 import React from "react";
-import { Mail, Github, Linkedin, Phone } from "lucide-react"; // import Phone icon
 import { motion } from "framer-motion";
 import { MdArrowForward } from "react-icons/md";
 
@@ -7,22 +6,18 @@ export default function Contact() {
   const contactLinks = [
     {
       title: "Email",
-      icon: <Mail size={28} />,
       href: "mailto:linusgodwin2@gmail.com",
     },
     {
       title: "GitHub",
-      icon: <Github size={28} />,
       href: "https://github.com/Godwinlinus",
     },
     {
       title: "LinkedIn",
-      icon: <Linkedin size={28} />,
       href: "https://linkedin.com/in/godwin-linus-md-4a5082196",
     },
     {
       title: "twitter",
-      icon: <Linkedin size={28} />,
       href: "https://x.com/godwin_orian",
     },
   ];
@@ -30,9 +25,6 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
       className="py-32 px-12 md:px-24 bg-surface-container-lowest relative z-10"
     >
       <div className="max-w-7xl mx-auto">

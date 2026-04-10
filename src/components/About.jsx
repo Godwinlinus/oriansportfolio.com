@@ -20,6 +20,9 @@ export default function About() {
         className="max-w-7xl mx-auto px-12 md:px-24"
       >
         <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center"
 
         >
@@ -51,9 +54,13 @@ export default function About() {
               alt="Linus Mba"
               className="w-full grayscale brightness-75 hover:brightness-100 transition-all duration-1000"
             />
-            <div className="absolute -bottom-8 -right-8 p-8 md:p-12 bg-primary text-on-primary">
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.6 }} 
+              className="absolute -bottom-8 -right-8 p-8 md:p-12 bg-primary text-on-primary">
               <p className="font-headline text-4xl italic">"Silent strength."</p>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </motion.div>

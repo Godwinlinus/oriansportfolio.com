@@ -60,12 +60,14 @@ const Experience = () => {
     <section id="experience" className="py-32 px-12 md:px-24 bg-surface border-b border-outline-variant/10">
       {/* Card wrapper */}
       <motion.div
-        initial={{ opacity: 0, y: 18 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
         className="max-w-7xl mx-auto"
       >
-        <div className="mb-20">
+        <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+
+        className="mb-20">
           <span className="font-label text-[10px] text-outline tracking-[0.5em] uppercase block mb-8" >
             Professional Path
           </span>
@@ -88,7 +90,7 @@ const Experience = () => {
               <span className="font-label text-[10px] tracking-widest uppercase">Creative Tech</span>
             </div>
           </div>
-        </div>
+        </motion.div>
         <div>
           <span className="font-label text-[10px] text-outline tracking-[0.5em] uppercase block mb-8" >
             Academic Background

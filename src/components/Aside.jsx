@@ -13,9 +13,9 @@ const Aside = () => {
     <div>
         {/* Side Social Links */}
         <motion.div
-            initial={{ opacity: 0, y: -40 }}
+            initial={{ opacity: 0, y: -80 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 2.4 }}
             className="fixed right-0 top-0 h-full w-16 bg-transparent flex flex-col justify-center items-center gap-20 z-40 hidden md:flex"
         >
             {Object.entries(socials).map(([platform, url]) => (

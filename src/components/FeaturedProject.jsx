@@ -21,23 +21,28 @@ export default function FeaturedProjects() {
   return (
     <motion.section
       id="work"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
       className="py-32 px-12 md:px-24 relative z-10 bg-surface"
     >
-      <div className="flex justify-between items-end mb-24">
+      <motion.div 
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.6 }}
+      className="flex justify-between items-end mb-24">
         <h2 className="font-headline text-5xl md:text-7xl">
           Featured 
           <br/>
           <span className="italic">Creations</span>
         </h2>
         <span className="font-label text-[10px] text-outline tracking-[0.5em] mb-4 uppercase">01 — Projects</span>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
         {/* Large Project Card */}
-        <div className="md:col-span-8 group">
+        <motion.div 
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.6 }}
+        className="md:col-span-8 group">
           <div className="aspect-[16/9] bg-surface-container-low overflow-hidden relative">
 
             {/* image here */}
@@ -56,10 +61,13 @@ export default function FeaturedProjects() {
             </h3>
             <p className="font-body text-on-surface-variant max-w-lg">A decentralized infrastructure focusing on low-latency data processing and real-time visualization for financial clusters.</p>
           </div>
-        </div>
+        </motion.div>
 
         {/* vertical offset card */}
-        <div className="md:col-span-4 md:mt-32 group">
+        <motion.div 
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.8 }}className="md:col-span-4 md:mt-32 group">
           <div className="aspect-[3/4] bg-surface-container-low overflow-hidden relative">
 
           {/* imag here */}
@@ -77,10 +85,14 @@ export default function FeaturedProjects() {
             </h3>
             <p className="font-body text-sm text-on-surface-variant uppercase tracking-widest">Interactive UI / 2024</p>
           </div>
-        </div>
+        </motion.div>
 
         {/* small grid items  */}
-        <div className="md:col-span-4 group">
+        <motion.div 
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.6 }}
+        className="md:col-span-4 group">
           <div className="aspect-square bg-surface-container-low overflow-hidden relative">
             <img 
               className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 transition-all duration-700"
@@ -97,10 +109,14 @@ export default function FeaturedProjects() {
               </span>
             </div>
           </div>
-        </div> 
+        </motion.div> 
           
 
-        <div className="md:col-span-4 md:mt-24 group">
+        <motion.div 
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.8}}
+        className="md:col-span-4 md:mt-24 group">
           <div className="aspect-square bg-surface-container-low overflow-hidden relative">
             <img 
               className="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 transition-all duration-700"
@@ -114,7 +130,7 @@ export default function FeaturedProjects() {
             <div className="w-8 h-[1px] bg-outline-variant my-4"></div>
             <span className="font-label text-[10px] text-outline uppercase tracking-widest">Library Design</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );

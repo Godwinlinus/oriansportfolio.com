@@ -19,19 +19,26 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 1 }}
             className="font-label text-primary uppercase tracking-[0.4em] text-sm mb-8"
           >
             Selected Portfolio {new Date().getFullYear()}
           </motion.p> 
-          <h1 className="font-headline text-6xl md:text-[8rem] leading-[0.9] font-light text-on-background mb-12">
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 1.4 }}
+            className="font-headline text-6xl md:text-[8rem] leading-[0.9] font-light text-on-background mb-12">
             I am Godwin. <br />
             <span className="italic text-primary-fixed-dim">
               A Software Engineer
             </span>
-          </h1>
+          </motion.h1>
           <div className="flex flex-col md:flex-row gap-12 mt-16 items-start md:items-center">
-            <a 
+            <motion.a 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.2, delay: 1.6 }}
               href="#work"
               className="flex items-center gap-4 group cursor-pointer"
               >
@@ -39,11 +46,15 @@ export default function Hero() {
               <span className="font-label uppercase tracking-widest text-xs">
                 Explore My Works
               </span>
-            </a>
-            <p className="max-w-md font-body text-on-surface-variant text-lg leading-relaxed">
+            </motion.a>
+            <motion.p 
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.2, delay: 1.6 }}
+              className="max-w-md font-body text-on-surface-variant text-lg leading-relaxed">
               Fueled by  deep curiosity for technology and an obsession with solving real problems, i've led and collaborated 
               on initiatives that reshaped the fintech, healthcare and eCommerce space.
-            </p>
+            </motion.p>
           </div>             
         </div>
       </div>

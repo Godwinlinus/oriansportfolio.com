@@ -18,12 +18,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 h-20 bg-surface-dim flex justify-between items-center px-12 shadow-sm">
+    <nav className="fixed top-0 left-0 w-full z-50 h-20 bg-surface-dim flex justify-between items-center px-12 shadow-md border-b border-outline-variant/10">
       {/* Logo / Name */}
       <motion.a
-        initial={{ opacity: 0, x: -30 }}
+        initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1 }}
         href="#hero"
         className="text-xl font-serif text-on-background tracking-tighter uppercase font-headline"
       >
@@ -32,9 +32,9 @@ export default function Navbar() {
 
       {/* Desktop Menu */}
       <motion.div
-        initial={{ opacity: 0, x: 30 }}
+        initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1 }}
         className="hidden lg:flex items-center"
       >
         {navLinks.map((link) => (
@@ -66,7 +66,7 @@ export default function Navbar() {
             initial={{ opacity: 0, x: "-100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "-100%" }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 0.5 }}
           >
             <div className="text-xl font-serif text-on-background tracking-tighter uppercase font-headline mb-8 pb-6 border-b border-outline-variant/10">Orian</div>
             {navLinks.map((link) => (

@@ -13,16 +13,29 @@ import Aside from "./components/Aside";
 
 export default function App() {
   const controls = useAnimation();
+  const rings = [300, 600, 900, 1200];
+
   return (
     <div className="relative scroll-smooth overflow-hidden">
       <Navbar />
       <Aside />
       <main className="relative pt-20">
-        <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] border border-primary/5 rounded-full"></div>
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] border border-primary/5 rounded-full"></div>
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-primary/5 rounded-full"></div>
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] border border-primary/5 rounded-full"></div>
+        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+          {rings.map((size, index) => (
+            <div
+              key={size}
+              className="absolute top-1/2 left-1/2 
+                        -translate-x-1/2 -translate-y-1/2 
+                        border border-primary/15 rounded-full 
+                        ring-animate"
+              style={{
+                width: `${size}px`,
+                height: `${size}px`,
+                opacity: 0.5,
+                animationDelay: `${index * 0.4}s`,
+              }}
+            />
+          ))}
         </div>
         <section id="hero">
           <Hero />

@@ -13,7 +13,7 @@ export default function Footer() {
             href="">Privacy Policy</a>
           <a 
             className="font-sans text-[10px] tracking-widest text-[#e5e2e1]/50 hover:text-[#e5e2e1] uppercase"
-            href="">Terms of Service</a>
+            href="https://linusgodwin.medium.com/terms-of-service-cf5c17fe9f44">Terms of Service</a>
         </div>
       </div>
     </footer>

@@ -67,3 +67,22 @@ body {
   color: var(--color-on-background);
   background-color: var(--color-surface-dim);
 }
+
+@keyframes ringPulse {
+  0% {
+    opacity: 0.5; /* equals roughly primary/5 */
+    transform: scale(1);
+  }
+  40% {
+    opacity: 1;   /* equals primary/10 visually stronger */
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+.ring-animate {
+  animation: ringPulse 0.9s ease forwards;
+}

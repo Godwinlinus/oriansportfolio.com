@@ -42,9 +42,9 @@ export default function TechnicalSkills() {
     <section id="experience" className="py-32 px-12 md:px-24 relative z-10 bg-surface border-t border-outline-variant/10">
           {/* Card wrapper */}
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 1, delay: 0.6 }}
             className="flex justify-between items-end mb-24"
           >
             <h2 className="font-headline text-5xl md:text-7xl">
@@ -55,7 +55,11 @@ export default function TechnicalSkills() {
               02 — Stacks
             </span>
           </motion.div>
-          <div className="grid md:grid-cols-1 md:grid-cols-3 gap-16">
+          <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="grid md:grid-cols-1 md:grid-cols-3 gap-16">
             <div className="space-y-8">
               <div className="flex items-center gap-4">
                 <span className="text-primary text-xl"><BsLayersFill /></span>
@@ -146,7 +150,7 @@ export default function TechnicalSkills() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
     </section>
   );
 }
