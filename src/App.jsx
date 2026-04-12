@@ -1,6 +1,6 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -10,13 +10,30 @@ import Experience from "./components/Experience";
 import TechnicalSkills from "./components/TechnicalSkills";
 import FeaturedPorjects from "./components/FeaturedProject";
 import Aside from "./components/Aside";
+import Preloader from "./components/Preloader";
 
 export default function App() {
-  const controls = useAnimation();
+  const [loading, setLoading] = useState(true);
   const rings = [300, 600, 900, 1200];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 7000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Preloader />;
+  }
 
   return (
     <div className="relative scroll-smooth overflow-hidden">
+      {/* <AnimatePresence>
+        {loading && <Preloader />}
+      </AnimatePresence> */}
+
       <Navbar />
       <Aside />
       <main className="relative pt-20">
