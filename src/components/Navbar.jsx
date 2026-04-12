@@ -23,7 +23,7 @@ export default function Navbar() {
       <motion.a
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.6 }}
         href="#hero"
         className="text-xl font-serif text-on-background tracking-tighter uppercase font-headline"
       >
@@ -52,7 +52,7 @@ export default function Navbar() {
         <motion.button
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.6 }}
             onClick={() => setIsOpen((v) => !v)}
             className="text-primary lg:hidden p-2 transition hover:scale-110"
             aria-label="Toggle menu"
@@ -69,7 +69,7 @@ export default function Navbar() {
             initial={{ opacity: 0, x: "-100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "-100%" }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.4 }}
           >
             <div className="text-xl font-serif text-on-background tracking-tighter uppercase font-headline mb-8 pb-6 border-b border-outline-variant/10">Orian</div>
             {navLinks.map((link) => (
