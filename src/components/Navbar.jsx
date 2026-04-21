@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaTty } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
@@ -10,20 +9,39 @@ export default function Navbar() {
     { name: "HELLO", href: "#hero" },
     { name: "ABOUT", href: "#about" },
     { name: "WORK", href: "#work" },
-    { name: "AWARD", href: "#" }, 
-    { name: "ARTICLES", href: "#" }, 
-    { name: "RESUME", href: "resume.pdf"},
+    { name: "AWARD", href: "#" },
+    { name: "ARTICLES", href: "#" },
+    { name: "RESUME", href: "resume.pdf" },
     { name: "SAY HELLO", href: "#contact" },
-
   ];
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
+
+  // Shared transition
+  const transition = { duration: 0.5, ease: "easeOut" };
+
+  // Desktop stagger
+  const container = {
+    hidden: {},
+    show: {
+      transition: { staggerChildren: 0.08 },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: -10 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 h-20 bg-surface-dim flex justify-between items-center px-12 shadow-md border-b border-outline-variant/10">
-      {/* Logo / Name */}
+    <nav className="fixed top-0 left-0 w-full z-40 h-20 bg-surface-dim flex justify-between items-center px-12 shadow-md border-b border-outline-variant/10">
+      {/* Logo */}
       <motion.a
-        initial={{ opacity: 0, x: -40 }}
+        initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={transition}
         href="#hero"
         className="text-xl font-serif text-on-background tracking-tighter uppercase font-headline"
       >
@@ -32,58 +50,91 @@ export default function Navbar() {
 
       {/* Desktop Menu */}
       <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
+        variants={container}
+        initial="hidden"
+        animate="show"
         className="hidden lg:flex items-center"
       >
         {navLinks.map((link) => (
-          <a
+          <motion.a
             key={link.name}
+            variants={item}
             href={link.href}
             className="hover:bg-surface-container-high text-primary font-bold px-6 py-2 font-serif text-[12px] uppercase tracking-[0.1em]"
           >
             {link.name}
-          </a>
+          </motion.a>
         ))}
       </motion.div>
 
-      {/* Mobile Menu Button */}
-        <motion.button
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            onClick={() => setIsOpen((v) => !v)}
-            className="text-primary lg:hidden p-2 transition hover:scale-110"
-            aria-label="Toggle menu"
-            whileTap={{ scale: 0.95 }}
-          >
-            {isOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
-        </motion.button>
-
-      {/* Mobile Dropdown */}
-      <AnimatePresence>
-        {isOpen && (
+      {/* Mobile Button with Animated Icon */}
+      <motion.button
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={transition}
+        onClick={() => setIsOpen((v) => !v)}
+        className="text-primary lg:hidden p-2"
+        aria-label="Toggle menu"
+        whileTap={{ scale: 0.9 }}
+      >
+        <AnimatePresence mode="wait">
           <motion.div
-            className="text-white fixed top-0 left-0 z-50 h-screen w-2/3 p-6 flex flex-col justify-start space-y-6 bg-surface-dim lg:hidden bg-surface border-r border-outline-variant/10"
-            initial={{ opacity: 0, x: "-100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "-100%" }}
-            transition={{ duration: 0.4 }}
+            key={isOpen ? "close" : "menu"}
+            initial={{ rotate: -90, opacity: 0 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            exit={{ rotate: 90, opacity: 0 }}
+            transition={{ duration: 0.2 }}
           >
-            <div className="text-xl font-serif text-on-background tracking-tighter uppercase font-headline mb-8 pb-6 border-b border-outline-variant/10">Orian</div>
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="hover:bg-surface-container-high text-primary"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </a>
-            ))}
-            <button className="px-2 mt-4" />
+            {isOpen ? (
+              <FiX className="w-6 h-6" />
+            ) : (
+              <FiMenu className="w-6 h-6" />
+            )}
           </motion.div>
+        </AnimatePresence>
+      </motion.button>
+
+      {/* Mobile Menu + Overlay */}
+      <AnimatePresence mode="wait">
+        {isOpen && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setIsOpen(false)}
+            />
+
+            {/* Sliding Panel */}
+            <motion.div
+              className="fixed top-0 left-0 z-50 h-screen w-2/3 p-6 flex flex-col space-y-6 bg-surface-dim border-r border-outline-variant/10 lg:hidden"
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+            >
+              <div className="text-xl font-serif text-on-background tracking-tighter uppercase font-headline mb-8 pb-6 border-b border-outline-variant/10">
+                Orian
+              </div>
+
+              {navLinks.map((link, index) => (
+                <motion.a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="text-primary text-lg font-semibold py-2 hover:bg-surface-container-high"
+                >
+                  {link.name}
+                </motion.a>
+              ))}
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>
